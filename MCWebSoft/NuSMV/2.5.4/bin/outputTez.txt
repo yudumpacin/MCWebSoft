@@ -1,0 +1,150 @@
+*** This is NuSMV 2.5.4 (compiled on Fri Oct 28 14:13:29 UTC 2011)
+*** Enabled addons are: compass 
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <nusmv-users@fbk.eu>
+
+*** Copyright (c) 2010, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat
+*** Copyright (c) 2003-2005, Niklas Een, Niklas Sorensson 
+
+-- specification AG (webstate = state9 -> EF webstate = index)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 1.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 1.2 <-
+  webstate = state1
+  element = _HTML_1__BODY_1__P_1__A_1_
+-> State: 1.3 <-
+  login = TRUE
+  webstate = state2
+  element = _HTML_1__BODY_1__DIV_1__A_2_
+-> State: 1.4 <-
+  webstate = state9
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_3__TBODY_1__TR_1__TD_1__A_2_
+-- specification AG (webstate = state5 -> EF webstate = index)  is true
+-- specification AG (webstate = state7 -> EF webstate = index)  is true
+-- specification AG (webstate = state2 -> EF webstate = index)  is true
+-- specification AG (webstate = state1 -> EF webstate = index)  is true
+-- specification AG (webstate = state4 -> EF webstate = index)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 2.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 2.2 <-
+  webstate = state4
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_1__TBODY_1__TR_1__TD_1__A_1_
+-- specification AG (webstate = state13 -> EF webstate = index)  is true
+-- specification AG (webstate = state10 -> EF webstate = index)  is true
+-- specification AG (webstate = state14 -> EF webstate = index)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 3.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 3.2 <-
+  webstate = state1
+  element = _HTML_1__BODY_1__P_1__A_1_
+-> State: 3.3 <-
+  login = TRUE
+  webstate = state2
+  element = _HTML_1__BODY_1__DIV_1__A_2_
+-> State: 3.4 <-
+  webstate = state10
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_4__TBODY_1__TR_1__TD_1__A_2_
+-> State: 3.5 <-
+  webstate = state14
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__A_1_
+-- specification AG ((webstate = index & login = TRUE) -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG ((webstate = state1 & login = TRUE) -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG (webstate = state9 -> !(EX webstate = dead_end_webstate))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 4.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 4.2 <-
+  webstate = state1
+  element = _HTML_1__BODY_1__P_1__A_1_
+-> State: 4.3 <-
+  login = TRUE
+  webstate = state2
+  element = _HTML_1__BODY_1__DIV_1__A_2_
+-> State: 4.4 <-
+  webstate = state9
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_3__TBODY_1__TR_1__TD_1__A_2_
+-> State: 4.5 <-
+  webstate = dead_end_webstate
+-- specification AG (webstate = state5 -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG (webstate = state7 -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG (webstate = state2 -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG (webstate = state4 -> !(EX webstate = dead_end_webstate))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 5.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 5.2 <-
+  webstate = state4
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_1__TBODY_1__TR_1__TD_1__A_1_
+-> State: 5.3 <-
+  webstate = dead_end_webstate
+-- specification AG (webstate = state13 -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG (webstate = state10 -> !(EX webstate = dead_end_webstate))  is true
+-- specification AG (webstate = state14 -> !(EX webstate = dead_end_webstate))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 6.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 6.2 <-
+  webstate = state1
+  element = _HTML_1__BODY_1__P_1__A_1_
+-> State: 6.3 <-
+  login = TRUE
+  webstate = state2
+  element = _HTML_1__BODY_1__DIV_1__A_2_
+-> State: 6.4 <-
+  webstate = state10
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_4__TBODY_1__TR_1__TD_1__A_2_
+-> State: 6.5 <-
+  webstate = state14
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__A_1_
+-> State: 6.6 <-
+  webstate = dead_end_webstate
+-- specification !(EF (webstate = state9 & login = FALSE))  is true
+-- specification !(EF (webstate = state5 & login = FALSE))  is true
+-- specification !(EF (webstate = state7 & login = FALSE))  is true
+-- specification !(EF (webstate = state2 & login = FALSE))  is true
+-- specification !(EF (webstate = state4 & login = FALSE))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+-> State: 7.1 <-
+  login = FALSE
+  webstate = index
+  element = null_element
+-> State: 7.2 <-
+  webstate = state4
+  element = _HTML_1__BODY_1__TABLE_1__TBODY_1__TR_1__TD_1__TABLE_1__TBODY_1__TR_1__TD_1__A_1_
+-- specification !(EF (webstate = state13 & login = FALSE))  is true
